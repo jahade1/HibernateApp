@@ -2,6 +2,8 @@ package com.jahadenglish.hibernate.demo.entity;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
@@ -10,6 +12,7 @@ import javax.persistence.Table;
 public class Student {
 	
 	@Id  //used to notate which field is the primary key
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	@Column(name="id") //maps this field to a column in the database
 	private int id;
 	
