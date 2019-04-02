@@ -32,6 +32,7 @@ public class QueryStudentDemo {
 			System.out.println();
 			
 			//query students with lastname = 'english'
+			System.out.println("students with lastname = 'english'");
 			theStudents = session.createQuery("from Student s where s.lastName='english'").getResultList();
 			displayStudent(theStudents);
 			
@@ -39,13 +40,15 @@ public class QueryStudentDemo {
 			System.out.println();
 			
 			//query students with lastname='english' or firstname='evione'
+			System.err.println("students with lastname='english' or firstname='evione'");
 			theStudents = session.createQuery("from Student s where s.lastName='english' OR s.firstName='evione'").getResultList();
 			displayStudent(theStudents);
 			
 			System.out.println();
 			System.out.println();
 			
-			//query student where email like '%gmail.com'
+			//query students where email like '%gmail.com'
+			System.out.println("students where email like '%gmail.com");
 			theStudents = session.createQuery("from Student s where s.email LIKE '%gmail.com'").getResultList();
 			displayStudent(theStudents);
 			
