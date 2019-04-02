@@ -28,11 +28,19 @@ public class QueryStudentDemo {
 			
 			//display the students
 			displayStudent(theStudents);
+			System.out.println();
+			System.out.println();
 			
 			//query students with lastname = 'english'
 			theStudents = session.createQuery("from Student s where s.lastName='english'").getResultList();
 			displayStudent(theStudents);
 			
+			System.out.println();
+			System.out.println();
+			
+			//query students with lastname='english' or firstname='evione'
+			theStudents = session.createQuery("from Student s where s.lastName='english' OR s.firstName='evione'").getResultList();
+			displayStudent(theStudents);
 			//commit transaction
 			session.getTransaction().commit();
 			System.out.println("done!!!!");
